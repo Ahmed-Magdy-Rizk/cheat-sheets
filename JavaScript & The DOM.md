@@ -23,48 +23,46 @@ There are three ways to declare a variable in JavaScript
 - undefined refers to the "absence of value".
 - while Null refers to not a number.
 
-#### example for null
-``` 
+#### Example for null
+```java script 
 var x = null;
 console.log(x);
-``` 
-#### Returns:
-``` 
+
+// Returns:
 null
 ```
-#### example for undefined
-``` 
+#### Example for undefined
+```java script 
 var x;
 console.log(x);
-``` 
-#### Returns:
-``` 
+
+// Returns:
 undefined
 ```
 
 ## Implicit type coercion
-#### example
-```
+#### Example
+```java script
 "1" == 1
-```
-#### Returns:
-```
+
+// Returns:
+
 true
 ```
-#### example
-```
+#### Example
+```java script
 "julia" + 1
-```
-#### Returns:
-```
+
+// Returns:
+
 "julia1"
 ````
-#### example
-```
-"Hello" % 10
-```
-#### Returns:
+#### Example
 ```java script
+"Hello" % 10
+
+// Returns:
+
 NaN
 
 /*
