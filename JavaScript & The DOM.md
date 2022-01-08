@@ -43,6 +43,7 @@ undefined
 ```
 
 ## Implicit type coercion
+#### example
 ```
 "1" == 1
 ```
@@ -50,6 +51,7 @@ undefined
 ```
 true
 ```
+#### example
 ```
 "julia" + 1
 ```
@@ -57,6 +59,7 @@ true
 ```
 "julia1"
 ````
+#### example
 ```
 "Hello" % 10
 ```
