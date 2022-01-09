@@ -151,7 +151,7 @@ switch (option) {
 }
 // Prints: You selected option 3.
 ```
-#### another ecample for switch statment using default & break
+#### another example for switch statment using default & break
 ```java script
 var prize = "";
 var winner = 0;
