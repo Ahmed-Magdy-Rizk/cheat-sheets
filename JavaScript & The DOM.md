@@ -2,13 +2,11 @@
 
 ## Variables
 There are three ways to declare a variable in JavaScript 
-- var, let and const.
-- var declarations are globally scoped or function scoped while let and const are block scoped.
-- var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
-- They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
-- While var and let can be declared without being initialized, const must be initialized during declaration.
+- let - It a new way to declare a variable in any scope - Global, Local, or Block. The value of this variable can be changed or reassigned anytime within its scope.
+- const - It is also a way to declare constants in any scope - Global, Local, or Block. Once you are assigned a value to a const variable, the value of this variable CANNOT be changed or reassigned throughout the code.
+- var - This is the old way of declaring variables in only two scope - Global, or Local. Variables declared with the var keyword can not have Block Scope. The value of this variable can be changed or reassigned anytime within its scope.
 
- *inconclusion you shoud use ***const*** more than ***let*** more than ***var***.*
+ *inconclusion you shoud use ***const*** more than ***let*** and rarely use ***var***.*
  
  ## Special characters
 |Code|Character|
