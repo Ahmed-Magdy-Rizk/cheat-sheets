@@ -170,3 +170,41 @@ console.log("You've won " + prize);
 
 // Prints: You've won tickets to the circus.
 ```
+## Return
+- Any function is always going to return some value back to the caller.
+- If a return value is not specified, then the function will just return back undefined including **console.log** function.
+- Return keyword has to job:
+    1- stop the execution of a function.
+    2- return a value back to the caller.
+    
+## Scope
+- If an identifier is declared in global scope, it's available everywhere.
+- If an identifier is declared in function scope, it's available in the function it was declared in (even in functions declared inside the function).
+- When trying to access an identifier, the JavaScript Engine will first look in the current function. If it doesn't find anything, it will continue to the next outer function to see if it can find the identifier there. It will keep doing this until it reaches the global scope.
+- Global identifiers are a bad idea. They can lead to bad variable names, conflicting variable names, and messy code.
+
+
+#### Example.
+```java script
+var a = 1;
+function x() {
+  var b = 2;
+  function y() {
+    var c = 3;
+    function z() {
+      var d = 4;
+    }
+    z();
+  }
+  y();
+}
+
+x();
+```
+- [ ] anywhere in the script!.
+- [ ] anywhere inside function x().
+- [X] anywhere inside function y(). 
+- [X] anywhere inside function z().
+
+
+
