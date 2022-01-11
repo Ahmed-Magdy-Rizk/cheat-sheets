@@ -248,10 +248,41 @@ console.log(bookTitle);
 > "The Little Prince"
 > "Le Petit Prince"
 ```
+## Hoisting
+- JavaScript hoists function declarations and variable declarations to the top of the current scope.
+- Variable assignments are not hoisted.
+- Declare functions and variables at the top of your scripts, so the syntax and behavior are consistent with each other.
 
+#### Example
+```java script
+sayHi("Julia");
 
+function sayHi(name) {
+  console.log(greeting + " " + name);
+  var greeting;
+}
 
+// Prints:
+> undefined Julia
+```
+#### another example
+```java script
+sayHi("Julia");
 
+function sayHi(name) {
+  console.log(greeting + " " + name);
+  var greeting = "Hello";
+}
+
+// Prints:
+> undefined Julia
+```
+- The variable declaration is hoisted to the top of current scope (the top of the function). Remember that the declaration is hoisted, **not the assignment**. The code inside sayHi is equivalent to:
+```java script
+var greeting;
+console.log(greeting + " " + name);
+greeting = "Hello";
+```
 
 
 
