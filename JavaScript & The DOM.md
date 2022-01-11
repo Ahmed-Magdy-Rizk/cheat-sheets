@@ -26,16 +26,16 @@ There are three ways to declare a variable in JavaScript
 var x = null;
 console.log(x);
 
-// Returns:
-null
+// Prints:
+> null
 ```
 #### Example for undefined
 ```java script 
 var x;
 console.log(x);
 
-// Returns:
-undefined
+// Prints:
+> undefined
 ```
 
 ## Implicit type coercion
@@ -44,8 +44,7 @@ undefined
 "1" == 1
 
 // Returns:
-
-true
+> true
 ```
 #### Example
 ```java script
@@ -53,15 +52,14 @@ true
 
 // Returns:
 
-"julia1"
+> "julia1"
 ````
 #### Example
 ```java script
 "Hello" % 10
 
 // Returns:
-
-NaN
+> NaN
 
 /*
 - For JavaScript to use the modulus operator, it will cast both "Hello" and 10 into number data type. 10 already is a number, but what about "Hello"? When "Hello" is converted into a number, the result is NaN (Not a Number). You can see this by typing Number("Hello") in the console.
@@ -86,7 +84,8 @@ var isGoing = true;
 var color = isGoing ? "green" : "red";
 console.log(color);
 
-// Prints: "green"
+// Prints: 
+> "green"
 ```
 #### Example
 ```java script
@@ -97,7 +96,8 @@ var category = eatsPlants ? (eatsAnimals ? "omnivore" : "herbivore") : (eatsAnim
 
 console.log(category);
 
-// Prints: "omnivore"
+// Prints: 
+> "omnivore"
 ```
 ## Switch Statement
 #### Example
@@ -147,7 +147,8 @@ switch (option) {
   case 6:
     console.log("You selected option 6.");
 }
-// Prints: You selected option 3.
+// Prints: 
+> You selected option 3.
 ```
 #### another example for switch statment using default & break
 ```java script
@@ -168,7 +169,8 @@ switch (winner) {
 
 console.log("You've won " + prize);
 
-// Prints: You've won tickets to the circus.
+// Prints: 
+> You've won tickets to the circus.
 ```
 ## Return
 - Any function is always going to return some value back to the caller.
@@ -205,6 +207,52 @@ x();
 - [ ] anywhere inside function x().
 - [X] anywhere inside function y(). 
 - [X] anywhere inside function z().
+
+## Shadowing
+- when a variable is declared in a certain scope having the same name defined on its outer scope and when we call the variable from the inner scope, the value assigned to the variable in the inner scope is the value that will be stored in the variable in the memory space.
+
+#### Example
+```java script
+var bookTitle = "Le Petit Prince";
+console.log (bookTitle);
+
+function displayBookEnglish() {
+ bookTitle = "The Little Prince";
+  console.log (bookTitle);
+}
+
+displayBookEnglish();
+console.log(bookTitle);
+
+// Prints:
+> "Le Petit Prince"
+> "The Little Prince"
+> "The Little Prince"
+```
+
+- to fix this we should declare a new variable in side the function.
+
+```java script 
+var bookTitle = "Le Petit Prince";
+console.log (bookTitle);
+
+function displayBookEnglish() {
+  var bookTitle "The Little Prince";
+  console.log(bookTitle);
+}
+
+displayBookEnglish();
+console.log(bookTitle);
+// Prints:
+> "Le Petit Prince"
+> "The Little Prince"
+> "Le Petit Prince"
+```
+
+
+
+
+
 
 
 
