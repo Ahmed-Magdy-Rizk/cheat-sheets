@@ -284,6 +284,14 @@ console.log(greeting + " " + name);
 greeting = "Hello";
 ```
 
+## Function Expression (anonymous function).
+-  When a function is assigned to a variable. The function can be named, or anonymous. Use the variable name to call a function defined in a function expression.
 
-
+#### Example
+```java script
+// anonymous function expression
+var doSomething = function(y) {
+  return y + 1;
+};
+```
 
