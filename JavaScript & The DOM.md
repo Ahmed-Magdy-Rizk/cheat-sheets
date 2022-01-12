@@ -172,7 +172,7 @@ console.log("You've won " + prize);
 // Prints: 
 > You've won tickets to the circus.
 ```
-## Return
+## Return keyword
 - Any function is always going to return some value back to the caller.
 - If a return value is not specified, then the function will just return back undefined including **console.log** function.
 - Return keyword has to job:
@@ -294,4 +294,45 @@ var doSomething = function(y) {
   return y + 1;
 };
 ```
+```java script
+// named function expression
+var doSomething = function addOne(y) {
+  return y + 1;
+};
+```
+```java script
+// for either of the definitions above, call the function like this:
+doSomething(5);
+```
+```java script
+// for either of the definitions above, call the function like this:
+doSomething(5);
+
+// Returns: 6
+```
+- You can even pass a function into another function inline. This pattern is commonly used in JavaScript, and can be helpful streamlining your code.
+
+#### Example
+```java script
+// function declaration that takes in two arguments: a string & another function.
+// notice that we put the value (2) in the first function for the next function
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+// caling the function
+emotions("happy", function(num) {
+    var sound = "";
+    for (let i = 0; i < num; i++) {
+        sound += "ha";
+    }
+    return sound + "!";
+});
+
+// Prints: I am happy, haha!
+```
+
+
+
+
+
 
