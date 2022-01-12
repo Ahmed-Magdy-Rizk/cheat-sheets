@@ -426,3 +426,7 @@ console.log(test);
 // Prints
 > [ 1, 2, 103, 4, 5, 106, 7, 8, 109 ]
 ```
+
+### map() method
+- With the map() method, you can take an array, perform some operation on each element of the array, and return a new array.
+
