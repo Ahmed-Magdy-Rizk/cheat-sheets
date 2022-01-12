@@ -319,7 +319,7 @@ doSomething(5);
 function emotions(myString, myFunc) {
     console.log("I am " + myString + ", " + myFunc(2));
 }
-// caling the function
+// calling the function
 emotions("happy", function(num) {
     var sound = "";
     for (let i = 0; i < num; i++) {
