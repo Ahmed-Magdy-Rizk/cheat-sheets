@@ -308,7 +308,8 @@ doSomething(5);
 // for either of the definitions above, call the function like this:
 doSomething(5);
 
-// Returns: 6
+// Returns: 
+> 6
 ```
 - You can even pass a function into another function inline. This pattern is commonly used in JavaScript, and can be helpful streamlining your code.
 
@@ -328,11 +329,100 @@ emotions("happy", function(num) {
     return sound + "!";
 });
 
-// Prints: I am happy, haha!
+// Prints: 
+> I am happy, haha!
 ```
 
+## Array
+### push() method
+- You can use the push() method to add elements to the end of an array.
+- with the push() method you need to pass the value of the element you want to add to the end of the array.
+- push() method returns the length of the array after an element has been added.
 
+#### Example
+```java sript
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled"];
 
+donuts.push("powdered"); // pushes "powdered" onto the end of the `donuts` array
 
+// Returns: 
+> 7
+// donuts array: ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"]
+```
 
+### pop() method
+- you can use the pop() method to remove elements from the end of an array.
+- pop() returns the element that has been removed in case you need to use it.
 
+#### Example
+```java script
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"];
+donuts.pop(); // the `pop()` method returns "powdered" because "powdered" was the last element on the end of `donuts` array
+
+// Returns: 
+> "powdered"
+```
+
+### splice() method
+- You can use splice() method to add and remove elements from anywhere within an array.
+- Following is the syntax of splice() method: 
+    arrayName.splice(arg1, arg2, item1, ....., itemX); where,
+    - arg1 = Mandatory argument. Specifies the starting index position to add/remove items.
+    - arg2 = Optional argument. Specifies the count of elements to be removed. **If set to 0, no items will be removed**.
+    - item1, ....., itemX are the items to be added at index position arg1
+ 
+- splice() method returns the item(s) that were removed.
+
+#### Example
+```java script
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller"];
+donuts.splice(1, 1, "chocolate cruller", "creme de leche"); // removes "chocolate frosted" at index 1 and adds "chocolate cruller" and "creme de leche" starting at index 1
+
+// Returns: 
+> ["chocolate frosted"]
+// donuts array after calling the splice() method: ["glazed", "chocolate cruller", "creme de leche", "Boston creme", "glazed cruller"]
+```
+### join() method
+- The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.
+
+#### Example 
+```java script 
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// Prints: 
+> "Fire,Air,Water"
+
+console.log(elements.join(''));
+// Prints: 
+> "FireAirWater"
+
+console.log(elements.join('-'));
+// Prints: 
+> "Fire-Air-Water"
+```
+
+### forEach() method
+- The forEach() method gives you an alternative way to iterate over an array, and manipulate each element in the array with an inline function expression.
+- The function that you pass to the forEach() method can take up to three parameters:
+    1- (element) The current element being processed in the array.
+    2- (index)(Optional) The index of element in the array.
+    3- (array) (Optional) The array forEach() was called upon.
+    
+#### Example
+```java script
+//loop over the following array and add 100 to each of the values if the value is divisible by 3.
+var test = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Write your code here
+test.forEach(function(element, index) {
+    if (element % 3 === 0) {
+        test[index] += 100;
+    }
+});
+
+console.log(test);
+
+// Prints
+> [ 1, 2, 103, 4, 5, 106, 7, 8, 109 ]
+```
