@@ -388,9 +388,9 @@ console.log(elements.join('-'));
 ### forEach() method
 - The forEach() method gives you an alternative way to iterate over an array, and manipulate each element in the array with an inline function expression.
 - The function that you pass to the forEach() method can take up to three parameters:
-    1- (element) The current element being processed in the array.
-    2- (index)(Optional) The index of element in the array.
-    3- (array) (Optional) The array forEach() was called upon.
+    -1. (element) The current element being processed in the array.
+    2. (index)(Optional) The index of element in the array.
+    3. (array) (Optional) The array forEach() was called upon.
     
 #### Example
 ```java script
@@ -412,3 +412,18 @@ console.log(test);
 ### map() method
 - With the map() method, you can take an array, perform some operation on each element of the array, and return a new array.
 
+#### Example
+```java script
+var myArray = [1, 2, 3, 4, 5];
+var newArray = myArray.map(function(elem) {
+   elem = elem + 100;
+   return elem;
+});
+
+console.log(newArray);
+console.log(myArray);
+
+// Prints:
+// [ 101, 102, 103, 104, 105 ]
+// [ 1, 2, 3, 4, 5 ]
+ ```
