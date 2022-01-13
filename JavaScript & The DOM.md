@@ -26,16 +26,14 @@ There are three ways to declare a variable in JavaScript
 var x = null;
 console.log(x);
 
-// Prints:
-> null
+// Prints: null
 ```
 #### Example for undefined
 ```java script 
 var x;
 console.log(x);
 
-// Prints:
-> undefined
+// Prints: undefined
 ```
 
 ## Implicit type coercion
@@ -43,23 +41,19 @@ console.log(x);
 ```java script
 "1" == 1
 
-// Returns:
-> true
+// Returns: true
 ```
 #### Example
 ```java script
 "julia" + 1
 
-// Returns:
-
-> "julia1"
+// Returns: "julia1"
 ````
 #### Example
 ```java script
 "Hello" % 10
 
-// Returns:
-> NaN
+// Returns: NaN
 
 /*
 - For JavaScript to use the modulus operator, it will cast both "Hello" and 10 into number data type. 10 already is a number, but what about "Hello"? When "Hello" is converted into a number, the result is NaN (Not a Number). You can see this by typing Number("Hello") in the console.
@@ -84,8 +78,7 @@ var isGoing = true;
 var color = isGoing ? "green" : "red";
 console.log(color);
 
-// Prints: 
-> "green"
+// Prints: "green"
 ```
 #### Example
 ```java script
@@ -96,8 +89,7 @@ var category = eatsPlants ? (eatsAnimals ? "omnivore" : "herbivore") : (eatsAnim
 
 console.log(category);
 
-// Prints: 
-> "omnivore"
+// Prints: "omnivore"
 ```
 ## Switch Statement
 #### Example
@@ -147,8 +139,7 @@ switch (option) {
   case 6:
     console.log("You selected option 6.");
 }
-// Prints: 
-> You selected option 3.
+// Prints: You selected option 3.
 ```
 #### another example for switch statment using default & break
 ```java script
@@ -169,8 +160,7 @@ switch (winner) {
 
 console.log("You've won " + prize);
 
-// Prints: 
-> You've won tickets to the circus.
+// Prints: You've won tickets to the circus.
 ```
 ## Return keyword
 - Any function is always going to return some value back to the caller.
@@ -225,9 +215,9 @@ displayBookEnglish();
 console.log(bookTitle);
 
 // Prints:
-> "Le Petit Prince"
-> "The Little Prince"
-> "The Little Prince"
+// "Le Petit Prince"
+// "The Little Prince"
+// "The Little Prince"
 ```
 
 - to fix this we should declare a new variable in side the function.
@@ -244,9 +234,9 @@ function displayBookEnglish() {
 displayBookEnglish();
 console.log(bookTitle);
 // Prints:
-> "Le Petit Prince"
-> "The Little Prince"
-> "Le Petit Prince"
+// "Le Petit Prince"
+// "The Little Prince"
+// "Le Petit Prince"
 ```
 ## Hoisting
 - JavaScript hoists function declarations and variable declarations to the top of the current scope.
@@ -262,8 +252,7 @@ function sayHi(name) {
   var greeting;
 }
 
-// Prints:
-> undefined Julia
+// Prints: undefined Julia
 ```
 #### another example
 ```java script
@@ -274,8 +263,7 @@ function sayHi(name) {
   var greeting = "Hello";
 }
 
-// Prints:
-> undefined Julia
+// Prints: undefined Julia
 ```
 - The variable declaration is hoisted to the top of current scope (the top of the function). Remember that the declaration is hoisted, **not the assignment**. The code inside sayHi is equivalent to:
 ```java script
@@ -308,8 +296,7 @@ doSomething(5);
 // for either of the definitions above, call the function like this:
 doSomething(5);
 
-// Returns: 
-> 6
+// Returns: 6
 ```
 - You can even pass a function into another function inline. This pattern is commonly used in JavaScript, and can be helpful streamlining your code.
 
@@ -329,8 +316,7 @@ emotions("happy", function(num) {
     return sound + "!";
 });
 
-// Prints: 
-> I am happy, haha!
+// Prints: I am happy, haha!
 ```
 
 ## Array
@@ -345,8 +331,7 @@ var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "
 
 donuts.push("powdered"); // pushes "powdered" onto the end of the `donuts` array
 
-// Returns: 
-> 7
+// Returns: 7
 // donuts array: ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"]
 ```
 
@@ -359,8 +344,7 @@ donuts.push("powdered"); // pushes "powdered" onto the end of the `donuts` array
 var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled", "powdered"];
 donuts.pop(); // the `pop()` method returns "powdered" because "powdered" was the last element on the end of `donuts` array
 
-// Returns: 
-> "powdered"
+// Returns: "powdered"
 ```
 
 ### splice() method
@@ -378,8 +362,7 @@ donuts.pop(); // the `pop()` method returns "powdered" because "powdered" was th
 var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller"];
 donuts.splice(1, 1, "chocolate cruller", "creme de leche"); // removes "chocolate frosted" at index 1 and adds "chocolate cruller" and "creme de leche" starting at index 1
 
-// Returns: 
-> ["chocolate frosted"]
+// Returns: ["chocolate frosted"]
 // donuts array after calling the splice() method: ["glazed", "chocolate cruller", "creme de leche", "Boston creme", "glazed cruller"]
 ```
 ### join() method
@@ -391,15 +374,15 @@ const elements = ['Fire', 'Air', 'Water'];
 
 console.log(elements.join());
 // Prints: 
-> "Fire,Air,Water"
+// "Fire,Air,Water"
 
 console.log(elements.join(''));
 // Prints: 
-> "FireAirWater"
+// "FireAirWater"
 
 console.log(elements.join('-'));
 // Prints: 
-> "Fire-Air-Water"
+// "Fire-Air-Water"
 ```
 
 ### forEach() method
@@ -423,8 +406,7 @@ test.forEach(function(element, index) {
 
 console.log(test);
 
-// Prints
-> [ 1, 2, 103, 4, 5, 106, 7, 8, 109 ]
+// Prints: [ 1, 2, 103, 4, 5, 106, 7, 8, 109 ]
 ```
 
 ### map() method
