@@ -388,7 +388,7 @@ console.log(elements.join('-'));
 ### forEach() method
 - The forEach() method gives you an alternative way to iterate over an array, and manipulate each element in the array with an inline function expression.
 - The function that you pass to the forEach() method can take up to three parameters:
-    -1. (element) The current element being processed in the array.
+    1. (element) The current element being processed in the array.
     2. (index)(Optional) The index of element in the array.
     3. (array) (Optional) The array forEach() was called upon.
     
