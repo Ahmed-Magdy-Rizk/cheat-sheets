@@ -543,3 +543,7 @@ myElement.innerHTML = 'The <strong>Greatest</strong> Ice Cream Flavors';
 
 - .textContent completely **ignores** any CSS styling and returns all of the element's HTML just as it's listed in the HTML
 - .innerText property will take CSS styling into consideration and will return the text that is visibly rendered on the page.
+
+#### Example
+- https://www.youtube.com/watch?v=x_F1R-VGxeE
+
