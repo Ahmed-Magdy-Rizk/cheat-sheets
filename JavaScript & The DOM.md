@@ -427,3 +427,80 @@ console.log(myArray);
 // [ 101, 102, 103, 104, 105 ]
 // [ 1, 2, 3, 4, 5 ]
  ```
+ 
+# The DOM
+## Selecting An Element By ID
+ - document.getElementById();.
+ - we're passing 'footer', not '#footer'. It already knows that it's searching for an ID (its name is "getElementById", for a reason!).
+
+#### Example
+```java script
+document.getElementById('footer');
+ 
+// Returns: <div id="main">…</div>
+ 
+```
+ ### Selecting Multiple Elements At Once (classes and tags)
+  - document.getElement**s**ByClassName();
+  - document.getElement**s**ByTagName();
+  - they return *HTMLCollection* **not** an array.
+  - Beware of the S!
+
+#### Example
+```java script
+document.getElementsByClassName('brand-color');
+ 
+// Returns: HTMLCollection []
+
+```
+
+#### Example
+```java script
+// 
+document.getElementsByTagName('p');
+ 
+// Returns: HTMLCollection(28)
+
+```
+### The querySelector Method
+- .querySelector() Returns A Single Element *the first element*.
+- unlike .getElementsByClassName() and .getElementsByTagName() both return a list of multiple elements, using .querySelector() with a class selector or a tag selector will still only return the first item it finds.
+  
+#### Example
+```java script
+// find and return the element with an ID of "header"
+document.querySelector('#header');
+
+// find and return the FIRST element with the class "header"
+document.querySelector('.header');
+
+// find and return the FIRST <header> element
+document.querySelector('header');
+ 
+// Returns: only the FIRST element you provided
+
+```
+#### another example
+```java script
+document.querySelector('p.callout'); 
+
+// Returns: the first paragraph element that also has a class of: callout
+```
+### The querySelectorAll Method
+- Returns a NodeList *not an array* of all elements with a certain class or all of one type of element (e.g. all <tr> tags).
+- is possible to loop over a NodeList with either its .forEach() method, or the humble for loop.
+ 
+#### Example
+```java script
+document.querySelectorAll('.articles p'); 
+
+// Returns: all paragraph elements that are descendents of elements that have the class: articles 
+```
+#### Another example
+```java script
+const allHeaders = document.querySelectorAll('header');
+
+for(let i = 0; i < allHeaders.length; i++){
+    console.dir(allHeaders[i]);
+}
+```
