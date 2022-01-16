@@ -429,7 +429,8 @@ console.log(myArray);
  ```
  
 # The DOM
-## Selecting An Element By ID
+## Selecting Elements By ID, classes and tags.
+### Selecting An Element By ID
  - document.getElementById();.
  - we're passing 'footer', not '#footer'. It already knows that it's searching for an ID (its name is "getElementById", for a reason!).
 
@@ -440,7 +441,7 @@ document.getElementById('footer');
 // Returns: <div id="main">…</div>
  
 ```
- ### Selecting Multiple Elements At Once (classes and tags)
+### Selecting Multiple Elements At Once (classes and tags)
   - document.getElement**s**ByClassName();
   - document.getElement**s**ByTagName();
   - they return *HTMLCollection* **not** an array.
@@ -504,3 +505,41 @@ for(let i = 0; i < allHeaders.length; i++){
     console.dir(allHeaders[i]);
 }
 ```
+## Updating & Creating content
+### Update Existing Content (.innerHTML, .textContent, .innerText)
+- The .innerHTML property returns the HTML content inside the selected element (i.e. between the tags).
+- here's also the rarely used .outerHTML property. .outerHTML represents the HTML element itself, as well as its children.
+ 
+#### Example
+```java script
+<h1 id="pick-me">Greetings To <span>All</span>!</h1>
+
+const innerResults = document.querySelector('#pick-me').innerHTML;
+console.log(innerResults); 
+
+// Prints:  the string: "Greetings To <span>All</span>!"
+
+const outerResults = document.querySelector('#pick-me').outerHTML;
+console.log(outerResults);
+
+// Prints:  logs the string: "<h1 id="pick-me">Greetings To <span>All</span>!</h1>"
+```
+ 
+- The .textContent property will:
+    1. set the text content of an element and all its descendants
+    2. return the text content of an element and all its descendants
+- passing text that contains HTML characters to .textContent **will not display the content as HTML**. Instead, it will still display everything as text - even the HTML characters!
+ 
+ - If you'd like to update an element, including its HTML, then you need to use the .innerHTML property
+                                     
+#### Example
+```java script
+myElement.textContent = 'The <strong>Greatest</strong> Ice Cream Flavors';
+// Returns: The <strong>Greatest</strong> Ice Cream Flavors
+
+myElement.innerHTML = 'The <strong>Greatest</strong> Ice Cream Flavors';
+// Returns: The **Greatest** Ice Cream Flavors
+```
+
+- .textContent completely **ignores** any CSS styling and returns all of the element's HTML just as it's listed in the HTML
+- .innerText property will take CSS styling into consideration and will return the text that is visibly rendered on the page.
