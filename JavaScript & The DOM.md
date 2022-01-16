@@ -522,7 +522,7 @@ console.log(innerResults);
 const outerResults = document.querySelector('#pick-me').outerHTML;
 console.log(outerResults);
 
-// Prints:  logs the string: "<h1 id="pick-me">Greetings To <span>All</span>!</h1>"
+// Prints: "<h1 id="pick-me">Greetings To <span>All</span>!</h1>"
 ```
  
 - The .textContent property will:
