@@ -584,4 +584,36 @@ mainHeading.insertAdjacentHTML('afterend', htmlTextToAdd);
 // Returns: h2 element as a usual header(wihtout the angels brackets) after the h1
 ```
 
-### 
+### Style Page Content
+- .style.<property>, you can only modify one CSS style at a time.
+
+#### Example
+```java script
+const mainHeading = document.querySelector('h1');
+
+mainHeading.style.color = 'blue';
+mainHeading.style.backgroundColor = 'orange';
+mainHeading.style.fontSize = '3.5em';
+```
+ 
+- you can use the .style.cssText property to set multiple CSS styles at once!
+- you write the CSS styles just as you would in a stylesheet; so you write font-size rather than fontSize. This is different than using the individual .style.<property> way.
+- .style.cssText will **overwrite** anything that's already in the .style attribute
+ 
+#### Example
+```java script
+const mainHeading = document.querySelector('h1');
+
+mainHeading.style.cssText = 'color: blue; background-color: orange; font-size: 3.5em';
+```
+#### another example
+```java script
+<p id="quizzing-quizzes" style="color: orange;">Howdy</p>
+
+document.querySelector('#quizzing-quizzes').style.cssText = 'width: 30px; textDecoration: underline;';
+ 
+// Returns: Only the width styling will be in the element's style attribute. The .style.cssText will overwrite anything that's already in the .style attribute 
+// (which removes the color styling),
+// The textDecoration rule is misspelled and should be text-decoration, so it gets dropped.
+```
+- 
