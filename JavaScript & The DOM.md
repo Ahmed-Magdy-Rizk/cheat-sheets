@@ -616,4 +616,49 @@ document.querySelector('#quizzing-quizzes').style.cssText = 'width: 30px; textDe
 // (which removes the color styling),
 // The textDecoration rule is misspelled and should be text-decoration, so it gets dropped.
 ```
-- 
+ 
+- The .className property returns a space-separated string of the classes.
+- you can convert the space-separated string into an array using the JavaScript string method .split() and manipulate it using any method like .push() or .pop()
+
+#### Example
+```java script
+<h1 id="main-heading" class="ank-student jpk-modal">Learn Web Development at Udacity</h1>
+const mainHeading = document.querySelector('#main-heading');
+
+// store the list of classes in a variable
+const listOfClasses = mainHeading.className;
+
+// Returns: the string "ank-student jpk-modal"
+
+const arrayOfClasses = listOfClasses.split(' ');
+console.log(arrayOfClasses);
+
+// Returns: logs out the array of strings ["ank-student", "jpk-modal"] 
+```
+ 
+- alternatively you can use The .classList Property
+- Returns A DOMTokenList.
+- The .classList property has a number of properties of its own. Some of the most popularly used ones are:
+
+   1. .add() - to add a class to the list
+   2. .remove() - to remove a class from the list
+   2. .toggle() - to add the class if it doesn't exists or remove it from the list if it does already exist
+   4. .contains() - returns a boolean based on if the class exists in the list or not
+ 
+#### Example
+```java script
+<h1 id="main-heading" class="ank-student jpk-modal">Learn Web Development at Udacity</h1>
+ 
+ const mainHeading = document.querySelector('#main-heading');
+
+// store the list of classes in a variable
+const listOfClasses = mainHeading.classList;
+
+console.log(listOfClasses);
+
+// logs out the DOMTokenList ["ank-student", "jpk-modal"] 
+```
+
+#### Example for the properties
+- https://www.youtube.com/watch?v=SIjgdT1O2Ns
+
