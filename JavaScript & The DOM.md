@@ -166,8 +166,8 @@ console.log("You've won " + prize);
 - Any function is always going to return some value back to the caller.
 - If a return value is not specified, then the function will just return back undefined including **console.log** function.
 - Return keyword has to job:
-    1- stop the execution of a function.
-    2- return a value back to the caller.
+    1. stop the execution of a function.
+    2. return a value back to the caller.
     
 ## Scope
 - If an identifier is declared in global scope, it's available everywhere.
