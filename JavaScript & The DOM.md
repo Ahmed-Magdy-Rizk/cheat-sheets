@@ -727,4 +727,35 @@ document.removeEventListener('click', function myEventListeningFunction() {
     2. both .addEventListener() and .removeEventListener have the same type
     3. .addEventListener() and .removeEventListener have their own distinct listener functions...they do not refer to the exact same function
  
-### 
+### Phases of an Event
+- There are three different phases during the lifecycle of an event. They are:
+    1. the capturing phase
+    2. the at target phase
+    3. and the bubbling phase
+- when .addEventListener() is called with only two arguments, the third method defaults to using the bubbling phase.
+
+ #### Example
+ - The code below uses .addEventListener() with only two arguments, so it will invoke the listener during the bubbling phase:
+  ```js
+ document.addEventListener('click', function () {
+   console.log('The document was clicked');
+});
+ ```
+- However, in this code, .addEventListener() is called with three arguments with the third argument being true (meaning it should invoke the listener earlier, during the capturing phase!).
+```js
+ document.addEventListener('click', function () {
+   console.log('The document was clicked');
+}, true);
+ ```
+- you can .preventDefault() method to prevent the default action from occurring!
+ 
+#### Example
+ ```js
+ const links = document.querySelectorAll('a');
+const thirdLink = links[2];
+
+thirdLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log("Look, ma! We didn't navigate to a new page!");
+});
+```
