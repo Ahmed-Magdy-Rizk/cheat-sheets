@@ -666,9 +666,9 @@ console.log(listOfClasses);
 ### Adding An Event Listener
  - .addEventListener() method will let us listen for events and respond to them!
  - an event listener needs three things:
-    1. an event target - this is called the target
-    2. the type of event to listen for - this is called the type
-    3. function to run when the event occurs - this is called the listener
+    1. an event target - this is called the target.
+    2. the type of event to listen for - this is called the type.
+    3. function to run when the event occurs - this is called the listener.
  
 #### Example
  ```java script
@@ -758,4 +758,4 @@ thirdLink.addEventListener('click', function (event) {
     event.preventDefault();
     console.log("Look, ma! We didn't navigate to a new page!");
 });
-```
+``` 
