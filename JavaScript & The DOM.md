@@ -662,3 +662,69 @@ console.log(listOfClasses);
 #### Example for the properties
 - https://www.youtube.com/watch?v=SIjgdT1O2Ns
 
+## Working with Browser Events
+### Adding An Event Listener
+ - .addEventListener() method will let us listen for events and respond to them!
+ - an event listener needs three things:
+    1. an event target - this is called the target
+    2. the type of event to listen for - this is called the type
+    3. function to run when the event occurs - this is called the listener
+ 
+#### Example
+ ```java script
+const mainHeading = document.querySelector('h1');
+ 
+mainHeading.addEventListener('click', function () {
+  console.log('The heading was clicked!');
+});
+ ```
+ 
+### Remove an Event Listener
+ - .removeEventListener() method will let us remove an evelnt listener
+ - an event listener needs three things:
+    1. an event target - this is called the target
+    2. the type of event to listen for - this is called the type
+    3. function to run when the event occurs - this is called the listener
+- .removeEventListener() method requires you to pass **the same exact listener function** to it as the one you passed to .addEventListener().
+ 
+ #### Example 
+ ```java script
+ function myEventListeningFunction() {
+    console.log('howdy');
+}
+
+// adds a listener for clicks, to run the `myEventListeningFunction` function
+document.addEventListener('click', myEventListeningFunction);
+
+// immediately removes the click listener that should run the `myEventListeningFunction` function
+document.removeEventListener('click', myEventListeningFunction);
+ 
+// This code will successfully add and then remove an event listener
+ ```
+- Now, why does this work? It works because both .addEventListener() and .removeEventListener:
+
+    1. have the same target
+    2. have the same type
+    3. **and pass the exact same listener**
+ 
+#### another Example
+```java script
+ // adds a listener for clicks, to run the `myEventListeningFunction` function
+document.addEventListener('click', function myEventListeningFunction() {
+    console.log('howdy');
+});
+
+// immediately removes the click listener that should run the `myEventListeningFunction` function
+document.removeEventListener('click', function myEventListeningFunction() {
+    console.log('howdy');
+});
+ 
+// it does not remove the event listener
+ ``` 
+- This code does not successfully remove the event listener. Again, why does this not work?
+
+    1. both .addEventListener() and .removeEventListener have the same target
+    2. both .addEventListener() and .removeEventListener have the same type
+    3. .addEventListener() and .removeEventListener have their own distinct listener functions...they do not refer to the exact same function
+ 
+### 
