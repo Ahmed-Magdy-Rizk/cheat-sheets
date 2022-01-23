@@ -751,7 +751,7 @@ document.removeEventListener('click', function myEventListeningFunction() {
  
 #### Example
  ```js
- const links = document.querySelectorAll('a');
+const links = document.querySelectorAll('a');
 const thirdLink = links[2];
 
 thirdLink.addEventListener('click', function (event) {
@@ -759,3 +759,46 @@ thirdLink.addEventListener('click', function (event) {
     console.log("Look, ma! We didn't navigate to a new page!");
 });
 ``` 
+ 
+## Performance
+### Add Page Content Efficiently
+- performance.now() returns a timestamp that is measured in milliseconds
+- hese are the steps to use performance.now() to measure the speed of your code:
+	1. use performance.now() to get the initial start time for the code
+    2. run the code you want to test
+    3. execute performance.now() to get another time measurement
+    4. subtract the initial time from the final time
+#### Example
+```js
+const startingTime = performance.now();
+
+const myCustomDiv = document.createElement('div');
+
+for (let i = 1; i <= 200; i++) {
+  const newElement = document.createElement('p');
+  newElement.innerText = 'This is paragraph number ' + i;
+
+  myCustomDiv.appendChild(newElement);
+}
+
+document.body.appendChild(myCustomDiv);
+
+const endingTime = performance.now();
+console.log('This code took ' + (endingTime - startingTime) + ' milliseconds.');
+ 
+// Prints: This code took 3 milliseconds.
+```
+- We can use the .createDocumentFragment() method to create an empty DocumentFragment object.
+#### Example
+```js
+const fragment = document.createDocumentFragment();  // ← uses a DocumentFragment instead of a <div>
+
+for (let i = 0; i < 200; i++) {
+    const newElement = document.createElement('p');
+    newElement.innerText = 'This is paragraph number ' + i;
+
+    fragment.appendChild(newElement);
+}
+
+document.body.appendChild(fragment); // reflow and repaint here -- once!
+```
