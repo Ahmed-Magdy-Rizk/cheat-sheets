@@ -1,4 +1,4 @@
-[Variables](## Variables)
+-	[Variables](https://github.com/Ahmed-Magdy-Rizk/cheat-sheets/edit/main/JavaScript%20&%20The%20DOM.md##Variables)
 # JavaScript
 ## Variables
 There are three ways to declare a variable in JavaScript 
