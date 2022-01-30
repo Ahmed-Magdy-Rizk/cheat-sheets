@@ -1,4 +1,4 @@
-- [Ternary operator](https://github.com/Ahmed-Magdy-Rizk/cheat-sheets/blob/main/JavaScript.md##Ternary-operator)
+-  [Variables](https://github.com/Ahmed-Magdy-Rizk/cheatsheets/blob/master/JavaScript&TheDOM.md#variables)
 # JavaScript
 ## Variables
 There are three ways to declare a variable in JavaScript 
