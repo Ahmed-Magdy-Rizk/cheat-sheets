@@ -1,5 +1,5 @@
+[Variables](## Variables)
 # JavaScript
-
 ## Variables
 There are three ways to declare a variable in JavaScript 
 - let - It a new way to declare a variable in any scope - Global, Local, or Block. The value of this variable can be changed or reassigned anytime within its scope.
@@ -8,7 +8,7 @@ There are three ways to declare a variable in JavaScript
 
  *inconclusion you shoud use ***const*** more than ***let*** and rarely use ***var***.*
  
- ## Special characters
+## Special characters
 |Code|Character|
 |--------|--------|
 |    \\    |\ (backslash)|
